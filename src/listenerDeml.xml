@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ListenerDeml Suite">
+    <listeners>
+        <listener class-name="com.qa.z_liuhaoqun_lenarn_canshu.ListenerDemo"/>
+        <listener class-name="com.qa.z_Demo_testng_failetoRun.MyRetryListener"/>
+    </listeners>
+
+    <test name="API_AutoFramework_Demo">
+        <classes>
+            <class name="com.qa.z_liuhaoqun_lenarn_canshu.ListenerDemo"/>
+
+            <class name="com.qa.z_Demo_testng_failetoRun.ReRunFailedTestCaseDemo"/>
+        </classes>
+    </test> <!-- Java_Learn -->
+</suite> <!-- Default Suite -->

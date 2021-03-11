@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default Suite">
+    <parameter name="Browser" value="chrome"/>
+    <parameter name="Server" value="https://www.baidu.com"/>
+    <parameter name="Name" value="Tom"/>
+    <test name="API_AutoFramework_Demo">
+        <groups>
+            <run>
+                <!--   <include name="API Test"/> -->
+                <!--   <include name="API.*"/> -->
+                <exclude name="Function.*"/>
+            </run>
+
+            <dependencies>
+                <group name="app" depends-on="tomcat"/>
+            </dependencies>
+        </groups>
+
+
+        <classes>
+            <class name="com.qa.z_liuhaoqun_lenarn_canshu.enabled_priopity"/>
+            <class name="com.qa.z_liuhaoqun_lenarn_canshu.my_test2"/>
+            <class name="com.qa.z_liuhaoqun_lenarn_canshu.my_test_Parameters"/>
+            <!-- 添加不同测试类文件 -->
+
+            <class name="com.qa.z_liuhaoqun_lenarn_canshu.testng_group"/>
+            <class name="com.qa.z_liuhaoqun_lenarn_canshu.setting_dependent_group"/>
+            <class name="com.qa.z_liuhaoqun_lenarn_canshu.ReRunFailedTestDemo"/>
+        </classes>
+    </test> <!-- Java_Learn -->
+</suite> <!-- Default Suite -->

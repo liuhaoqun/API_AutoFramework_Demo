@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default Suite]">
+    <parameter name="Server" value="https://www.baidu.com"/>
+    <parameter name="Browser" value="chrome"/>
+    <parameter name="Name" value="Tom"/>
+    <test thread-count="5" name="API_AutoFramework_Demo(failed)">
+        <groups>
+            <run>
+                <exclude name="Function.*"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.qa.z_liuhaoqun_lenarn_canshu.ReRunFailedTestDemo">
+                <methods>
+                    <include name="test05"/>
+                    <include name="test03"/>
+                </methods>
+            </class> <!-- com.qa.z_liuhaoqun_lenarn_canshu.ReRunFailedTestDemo -->
+        </classes>
+    </test> <!-- API_AutoFramework_Demo(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->
